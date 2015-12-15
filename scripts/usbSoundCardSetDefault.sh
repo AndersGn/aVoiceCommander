@@ -5,4 +5,6 @@
 	echo -e "pcm.!default sysdefault:Device" > /home/pi/.asoundrc
 	echo "if needed unmute the mic with: amixer sset 'Mic',0 unmute"
 	echo "Test the sound with: aplay /usr/share/sounds/alsa/Front_Center.wav"
-
+	aplay /usr/share/sounds/alsa/Front_Center.wav	
+	#Add config to root (so it will play sound when using sudo)
+	echo -e "pcm.!default sysdefault:Device" > /root/.asoundrc
