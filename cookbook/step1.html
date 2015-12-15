@@ -8,7 +8,7 @@
     <meta content="CookBook for VoiceCommands" name="description">
     <meta content="TheIOTHackers" name="author">
     <link href="favicon.ico" rel="icon">
-    <title>aVoiceCommander cookbook</title>
+    <title>Step1</title>
 	<!-- Bootstrap core CSS -->
    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
@@ -18,7 +18,7 @@
     </script>
 </head>
 <body role="document">
-    <!-- Fixed navbar -->
+       <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -27,54 +27,30 @@
                 "collapse" type="button"><span class="sr-only">Toggle
                 navigation</span> <span class="icon-bar"></span> <span class=
                 "icon-bar"></span> <span class="icon-bar"></span></button>
-                <a class="navbar-brand" href="#">aVoiceCommander</a>
+                <a class="navbar-brand" href="index.html">aVoiceCommander</a>
             </div>
         </div>
     </nav>
-    <div class="container theme-showcase" role="main">
+      <div class="container theme-showcase" role="main">
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
-            <h1>aVoiceCommander</h1>
-            <p>Here we collect all information about the project, how to,
-            hardware used, frameworks uses, OS used and so on.</p>
-        </div>
+            <h1>Respond to voice commands</h1>
+          </div>
         <div class="page-header">
-            <h1>OS Used</h1>
+            <h1>Packages to install</h1>
         </div>
-        <p>RASPBIAN JESSIE</p>
-        <p>Full desktop image based on Debian Jessie</p>
-        <p>Version: November 2015</p>
-        <p>Release date: 2015-11-21</p>
-        <p>Kernel version: 4.1</p>
-        <div class="page-header">
-            <h1>Hardware</h1>
-        </div>
-        <p>Rasberry Pi</p>
-		<div class="page-header">
-			<h1>Scripts (All scripts must be run with sudo)</h1>
-        </div>
-        <p>In the /scripts/ folder you will find bash scripts for setting up the enivroment</p>
-        <div class="page-header">
-			<h1>Steps</h1>
-        </div>
+          <h2><a href="http://espeak.sourceforge.net/">eSpeak</a></h2>
+            <p>Add eSpeak (to make it speak :-)</p>
+          <p><code>apt-get install -y espeak</code></p>
+            <p>Test the voice</p>
+          <p><code>espeak "hello"</code></p>
+           <h2><a href="http://cmusphinx.sourceforge.net/">Sphinx</a></h2>
+            <p>Make it respond to voice commands</p>
+            <p><code>sudo apt-get install libasound2-dev</code></p>
+            <p><code>sudo apt-get install bison</code></p>
+            <p>Download sphinxbase and PocketSphinx (tar.gz versions).</p>
 
-        <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="step1.html">Step1 <span class="sr-only">(current)</span></a></li>
-<!--        <li><a href="#">Link</a></li>-->
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-        
-        
+        </ul>
 		<!-- Bootstrap core JavaScript ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="js/jquery.min.js">
