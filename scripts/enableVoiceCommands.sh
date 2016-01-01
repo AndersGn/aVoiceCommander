@@ -42,4 +42,5 @@
 	cd $sphinxtrain_setupfolder
 	$sphinxtrain_setupfolder/configure
 	make -C $sphinxtrain_setupfolder/
-	sudo make install -C $sphinxtrain_setupfolder/	
+	sudo make install -C $sphinxtrain_setupfolder/
+	
