@@ -8,7 +8,7 @@
 	pocketsphinx_setupfolder="/home/pi/pocketsphinx/$pocketsphinx_version"
 	sphinxtrain_setupfolder="/home/pi/pocketsphinx/$sphinxtrain_version"
        
-	#Begin to do stuff
+	#Begin to setup and installing Voice Interfaces
 	   
 	echo "Add espeak (to get make it speak :-)"
 	apt-get install -y espeak
@@ -42,9 +42,4 @@
 	cd $sphinxtrain_setupfolder
 	$sphinxtrain_setupfolder/configure
 	make -C $sphinxtrain_setupfolder/
-	sudo make install -C $sphinxtrain_setupfolder/
-	
-	echo "Done setup and installing Voice Interfaces"
-		
-
-	
+	sudo make install -C $sphinxtrain_setupfolder/	
