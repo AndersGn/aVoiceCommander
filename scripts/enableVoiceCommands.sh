@@ -31,8 +31,19 @@
 	make -C $sphinxbase_setupfolder/
 	sudo make install -C $sphinxbase_setupfolder/
 	echo "define paths"
+	# do not add if lines allready exists
+	if grep -Fxq /etc/profile -e "export LD_LIBRARY_PATH=/usr/local/lib"
+		then
+		echo "Strange pocketsphinx path was allready defined"
+		else
+		sed -i '$ a export LD_LIBRARY_PATH=/usr/local/lib' /etc/profile
+	fi
+	if grep -Fxq /etc/profile -e "PKG_CONFIG_PATH=/usr/local/lib/pkgconfig"
+		then
+		echo "Strange pocketsphinx path was allready defined"
+		else
 	sed -i '$ a export LD_LIBRARY_PATH=/usr/local/lib' /etc/profile
-	sed -i '$ a export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig' /etc/profile
+	fi
 	echo "build pocketsphinx and install"
 	cd $pocketsphinx_setupfolder/
 	$pocketsphinx_setupfolder/configure
