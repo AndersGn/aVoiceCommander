@@ -1,4 +1,5 @@
 #!/bin/bash
+# If wifi do not work without Ethernetcabel connected to the Raspberry, this script might fix that problem :-)
 
 fileToLookIn="/etc/network/interfaces"
 
