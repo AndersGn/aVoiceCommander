@@ -1,4 +1,4 @@
-# Everything is highly experimental, use on own risk!!
+# Everything is highly experimental, use on own risk!
 # aVoiceCommander
 Use voice commands to communicate with the Raspberry Pi
 
